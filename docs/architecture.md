@@ -2,54 +2,123 @@ TrendOracle Labs Architecture
 
 Overview
 
-TrendOracle Labs is an AI-powered crypto intelligence platform that helps traders make better decisions through market analysis, whale tracking, news intelligence, and AI-generated trade insights.
+TrendOracle is an AI-powered crypto market intelligence platform designed to help traders make informed decisions through market analysis, whale tracking, news intelligence, risk management, and AI-generated trade proposals.
+
+The platform combines multiple data sources and intelligent analysis modules into a unified dashboard experience.
 
 System Flow
 
 User
 ↓
-Web Dashboard
+TrendOracle Dashboard
 ↓
-Backend API
+Backend Services
 ↓
 AI Intelligence Engine
 ↓
-Crypto Market Data Sources
+Market Data + Whale Data + News Sources
+↓
+Trade Proposals & Alerts
 
 Core Components
 
 Frontend
 
-- User Dashboard
-- AI Chat Interface
-- Market Analytics Panel
-- Trade Signal View
+- Dashboard Interface
+- AI Chat Assistant
+- Market Intelligence Panel
+- Trade Proposal View
+- Notification Center
+- Settings Management
+- Demo Trading Environment
 
-Backend
+Backend Services
 
 - API Management
-- Data Processing
-- Authentication
-- Market Data Aggregation
+- Data Processing Layer
+- Exchange Connectivity
+- Authentication System
+- Alert Distribution Service
+- Configuration Management
 
 AI Intelligence Engine
 
-- Technical Analysis
-- Trade Setup Generation
-- Market Summary Agent
-- News Intelligence
-- Whale Activity Analysis
+Market Intelligence Engine
+
+- Trend Detection
+- Price Analysis
+- Volume Analysis
+- Volatility Monitoring
+
+Trade Proposal Engine
+
+- Buy/Sell Opportunity Detection
+- Entry Zone Calculation
+- Target Price Generation
+- Confidence Score Calculation
+
+Whale Monitoring System
+
+- Large Wallet Tracking
+- Exchange Flow Monitoring
+- Whale Activity Detection
+- Market Impact Evaluation
+
+News Intelligence Module
+
+- News Collection
+- Sentiment Analysis
+- Event Impact Assessment
+- Confidence Adjustment
+
+Risk Management Engine
+
+- Trade Size Control
+- Risk Filtering
+- Exposure Monitoring
+- Confidence Threshold Validation
 
 Data Sources
 
 - Cryptocurrency Exchanges
 - Market Price Feeds
-- Crypto News Sources
-- On-Chain Analytics
+- Crypto News Providers
+- Blockchain Activity Data
+- Whale Tracking Sources
+
+Exchange Layer
+
+Currently Supported
+
+- Bitget Spot Trading
+
+Planned Support
+
+- Binance
+- OKX
+
+Notification Architecture
+
+TrendOracle generates:
+
+- Trade Alerts
+- Whale Alerts
+- Price Alerts
+- Market Summary Notifications
+
+Security Layer
+
+- API Key Encryption
+- Local Credential Protection
+- Secure Configuration Storage
+- Permission-Based Exchange Access
+- Demo Trading Isolation
 
 Future Expansion
 
-- Portfolio Tracking
-- Risk Management System
-- AI Trading Assistant
-- Multi-Exchange Support
+- Multi-Exchange Intelligence
+- Portfolio Analytics
+- Machine Learning Models
+- Personalized Trading Strategies
+- Real-Time Anomaly Detection
+- Advanced Market Forecasting
