@@ -1,10 +1,23 @@
-# TrendOracle Labs
+TrendOracle Labs
 
 AI-Powered Crypto Intelligence Platform built for the Bitget AI x Crypto Trading Hackathon.
 
 🚧 Currently under active development.
 
-Core Features:
+Overview
+
+TrendOracle Labs is an AI-powered crypto intelligence platform designed to help traders make better decisions through market analysis, news intelligence, whale tracking, and AI-generated trading insights.
+
+Problem Statement
+
+Crypto traders face information overload from market movements, news events, social sentiment, and on-chain activity. Analyzing these data sources manually is time-consuming and can result in missed trading opportunities.
+
+Solution
+
+TrendOracle Labs leverages artificial intelligence to aggregate, analyze, and transform complex crypto market data into actionable insights, helping traders react faster and make informed decisions.
+
+Core Features
+
 - AI Chat Assistant
 - Technical Analysis Engine
 - Trade Setup Generation
@@ -12,4 +25,41 @@ Core Features:
 - News Intelligence
 - Market Summary Agent
 
-More documentation coming soon.
+Technology Stack
+
+- Frontend: Modern Web Technologies
+- Backend: API-Driven Architecture
+- AI Layer: Large Language Models (LLMs)
+- Deployment: Replit
+
+Documentation
+
+- TEAM.md
+- docs/architecture.md
+- docs/roadmap.md
+- docs/features.md
+
+Development Status
+
+Current Stage: MVP Development
+
+Completed:
+
+- Repository Setup
+- Team Documentation
+- Architecture Design
+- Feature Planning
+
+In Progress:
+
+- AI Integration
+- Market Intelligence Modules
+- Frontend Enhancements
+
+Future Vision
+
+Our goal is to build a comprehensive AI-powered crypto intelligence ecosystem that delivers real-time market insights, trading opportunities, risk analysis, and decision support tools for traders worldwide.
+
+Hackathon
+
+Built for the Bitget AI x Crypto Trading Hackathon 2026.
