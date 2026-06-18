@@ -1,4 +1,3 @@
-```markdown
 # TrendOracle Labs
 
 **AI-Powered Crypto Intelligence Platform**  
@@ -124,4 +123,3 @@ Build a comprehensive AI-powered crypto intelligence ecosystem that delivers rea
 ---
 
 **Built with ❤️ for Bitget AI x Crypto Trading Hackathon 2026**
-```
