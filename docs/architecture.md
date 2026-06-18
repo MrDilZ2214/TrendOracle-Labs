@@ -1,124 +1,137 @@
-TrendOracle Labs Architecture
 
-Overview
+# TrendOracle Labs - System Architecture
 
-TrendOracle is an AI-powered crypto market intelligence platform designed to help traders make informed decisions through market analysis, whale tracking, news intelligence, risk management, and AI-generated trade proposals.
+## Overview
+TrendOracle Labs is an AI-powered crypto market intelligence platform designed to help traders make informed decisions through real-time market analysis, whale tracking, news intelligence, risk management, and AI-generated trade proposals.
 
-The platform combines multiple data sources and intelligent analysis modules into a unified dashboard experience.
+The platform combines multiple data sources and intelligent analysis modules into a unified, user-friendly dashboard experience. It follows a modular, scalable architecture with clear separation of concerns.
 
-System Flow
+## High-Level System Flow
+```
+User → Dashboard (Frontend) → FastAPI Backend → AI Intelligence Engine
+                           ↓
+                  Market Data + Whale Data + News
+                           ↓
+                  Trade Proposals, Insights & Alerts
+```
 
-User
-↓
-TrendOracle Dashboard
-↓
-Backend Services
-↓
-AI Intelligence Engine
-↓
-Market Data + Whale Data + News Sources
-↓
-Trade Proposals & Alerts
+## Core Components
 
-Core Components
+### 1. Frontend Layer
+- Modern, responsive web interface (HTML + CSS + JavaScript)
+- Real-time updates via WebSocket
+- Key Sections:
+  - Live Market Dashboard (prices, gainers, losers)
+  - AI Chat Assistant
+  - Trade Proposals Panel
+  - Whale Activity Monitor
+  - News & Sentiment Feed
+  - Notification Center
+  - Demo Trading Portfolio
+  - Settings & Configuration
 
-Frontend
+### 2. Backend Services (FastAPI)
+- RESTful API endpoints
+- WebSocket support for real-time data
+- Data processing and caching layer
+- Exchange API integrations
+- Authentication & session management
+- Alert distribution service
+- Static file serving (charts, assets)
 
-- Dashboard Interface
-- AI Chat Assistant
-- Market Intelligence Panel
-- Trade Proposal View
-- Notification Center
-- Settings Management
-- Demo Trading Environment
+### 3. AI Intelligence Engine (Multi-Agent System)
+Powered by NVIDIA API (LLM with tool-calling):
 
-Backend Services
+#### Market Intelligence Engine
+- Trend detection
+- Price action analysis
+- Volume and momentum analysis
+- Volatility monitoring
+- Technical indicators processing
 
-- API Management
-- Data Processing Layer
-- Exchange Connectivity
-- Authentication System
-- Alert Distribution Service
-- Configuration Management
+#### Trade Proposal Engine
+- Opportunity detection (Buy/Sell)
+- Entry zone calculation
+- Target prices (multiple)
+- Stop Loss recommendation
+- Risk:Reward ratio
+- Confidence scoring
 
-AI Intelligence Engine
+#### Whale Monitoring System
+- Large wallet tracking
+- Exchange inflow/outflow monitoring
+- Unusual transaction detection
+- Market impact evaluation
 
-Market Intelligence Engine
+#### News Intelligence Module
+- Real-time news collection
+- Sentiment analysis (Positive/Neutral/Negative)
+- Event impact assessment
+- Correlation with price movements
 
-- Trend Detection
-- Price Analysis
-- Volume Analysis
-- Volatility Monitoring
+#### Risk Management Engine
+- Position sizing control
+- Risk filtering
+- Portfolio exposure monitoring
+- User-defined risk tolerance enforcement
+- Confidence threshold validation
 
-Trade Proposal Engine
+### 4. Data Sources & Integrations
+- **Primary Exchange**: Bitget (live prices, tickers)
+- **Planned**: Binance, OKX
+- Market data feeds
+- Crypto news providers
+- Blockchain/whale activity sources
+- Internal SQLite database for caching and history
 
-- Buy/Sell Opportunity Detection
-- Entry Zone Calculation
-- Target Price Generation
-- Confidence Score Calculation
+### 5. Notification Architecture
+Generates intelligent alerts for:
+- New trade opportunities
+- Significant whale movements
+- Major price movements
+- Market summary reports
 
-Whale Monitoring System
+### 6. Security Layer
+- API key encryption
+- Local credential protection
+- Secure configuration storage
+- Read-only exchange permissions where possible
+- Isolated demo trading environment
+- No automatic real-money execution
 
-- Large Wallet Tracking
-- Exchange Flow Monitoring
-- Whale Activity Detection
-- Market Impact Evaluation
+## Project Structure
+```
+├── main.py                 # FastAPI entry point
+├── config.py               # API keys & settings
+├── agents/                 # AI agent modules
+├── core/                   # Business logic & services
+├── tools/                  # Exchange, data, utility tools
+├── public/                 # Static assets
+├── templates/              # HTML templates
+├── charts/                 # Generated visualization
+└── docs/                   # Documentation
+```
 
-News Intelligence Module
+## Technology Stack
+- **Backend**: Python + FastAPI
+- **AI**: NVIDIA LLM with tool calling
+- **Frontend**: HTML/CSS/JS + WebSocket
+- **Data**: Pandas, SQLite, Bitget API
+- **Visualization**: Matplotlib / Chart.js
 
-- News Collection
-- Sentiment Analysis
-- Event Impact Assessment
-- Confidence Adjustment
+## Development Status
+**MVP Completed** with full AI integration, Bitget connectivity, dashboard, and core engines.
 
-Risk Management Engine
+## Future Expansion
+- Multi-exchange support
+- Advanced portfolio analytics
+- Machine learning prediction models
+- Personalized trading strategies
+- Real-time anomaly detection
+- On-chain data integration
+- Mobile responsiveness improvements
 
-- Trade Size Control
-- Risk Filtering
-- Exposure Monitoring
-- Confidence Threshold Validation
+---
 
-Data Sources
-
-- Cryptocurrency Exchanges
-- Market Price Feeds
-- Crypto News Providers
-- Blockchain Activity Data
-- Whale Tracking Sources
-
-Exchange Layer
-
-Currently Supported
-
-- Bitget Spot Trading
-
-Planned Support
-
-- Binance
-- OKX
-
-Notification Architecture
-
-TrendOracle generates:
-
-- Trade Alerts
-- Whale Alerts
-- Price Alerts
-- Market Summary Notifications
-
-Security Layer
-
-- API Key Encryption
-- Local Credential Protection
-- Secure Configuration Storage
-- Permission-Based Exchange Access
-- Demo Trading Isolation
-
-Future Expansion
-
-- Multi-Exchange Intelligence
-- Portfolio Analytics
-- Machine Learning Models
-- Personalized Trading Strategies
-- Real-Time Anomaly Detection
-- Advanced Market Forecasting
+**Part of TrendOracle Labs**  
+Built for **Bitget AI x Crypto Trading Hackathon 2026**
