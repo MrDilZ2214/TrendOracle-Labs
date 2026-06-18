@@ -1,80 +1,127 @@
-TrendOracle Labs
+```markdown
+# TrendOracle Labs
 
-AI-Powered Crypto Intelligence Platform built for the Bitget AI x Crypto Trading Hackathon.
+**AI-Powered Crypto Intelligence Platform**  
+Built for **Bitget AI x Crypto Trading Hackathon 2026**
 
-🚧 Currently under active development.
+🚧 Under active development | Functional MVP Ready
 
-Overview
+![Status](https://img.shields.io/badge/Status-MVP_Complete-brightgreen) 
+![Python](https://img.shields.io/badge/Python-3.10%2B-blue) 
+![FastAPI](https://img.shields.io/badge/FastAPI-0.115-green) 
+![Bitget](https://img.shields.io/badge/Bitget-Integrated-orange)
 
+## Overview
 TrendOracle Labs is an AI-powered crypto intelligence platform designed to help traders make better decisions through market analysis, news intelligence, whale tracking, and AI-generated trading insights.
 
-Problem Statement
+It aggregates complex market data in real-time and transforms it into clear, actionable signals for crypto traders.
 
-Crypto traders face information overload from market movements, news events, social sentiment, and on-chain activity. Analyzing these data sources manually is time-consuming and can result in missed trading opportunities.
+## Problem Statement
+Crypto traders face massive information overload from constant market movements, breaking news events, social media sentiment, on-chain whale activity, and technical indicators. Manually analyzing all these sources is extremely time-consuming and often leads to missed opportunities or poor decision making.
 
-Solution
+## Solution
+TrendOracle Labs leverages advanced artificial intelligence to aggregate, analyze, and simplify complex crypto market data into clear, actionable insights. This helps traders react faster, spot opportunities earlier, and make more informed trading decisions with confidence.
 
-TrendOracle Labs leverages artificial intelligence to aggregate, analyze, and transform complex crypto market data into actionable insights, helping traders react faster and make informed decisions.
+## Core Features
+- **AI Chat Assistant**: Natural language interaction with tool-calling LLM for market queries and analysis
+- **Market Intelligence Dashboard**: Real-time prices, gainers, losers, and market overview
+- **Trade Proposal Engine**: AI-generated trade ideas with Entry, Stop Loss, Take Profit, and Risk:Reward ratios
+- **Whale Monitoring System**: Track large wallet movements and significant on-chain activity
+- **News Intelligence**: Sentiment analysis and impact assessment from latest crypto news
+- **Risk Management**: Portfolio risk evaluation and position sizing recommendations
+- **Demo Trading Environment**: Paper trading simulator to test strategies safely
+- **Notification Center**: Custom alerts for price movements, news, and signals
+- **Bitget Exchange Integration**: Live market data, tickers, and trading capabilities
+- **Market Summary Agent**: Daily/periodic AI-generated market reports
+- **Chart Generation**: Technical analysis charts with multiple indicators
+- **Multi-Agent System**: Specialized AI agents working together
 
-Core Features
+## Technology Stack
+- **Backend**: FastAPI + Python
+- **Frontend**: HTML, CSS, JavaScript with WebSocket support
+- **AI Layer**: NVIDIA API / Large Language Models with tool calling
+- **Data Sources**: Bitget API, additional exchange APIs
+- **Database**: SQLite (with option for PostgreSQL)
+- **Visualization**: Matplotlib / Chart.js
+- **Deployment**: Local, Replit, or cloud platforms
 
-• AI Chat Assistant
-• Market Intelligence Dashboard
-• Trade Proposal Engine
-• Whale Monitoring System
-• News Intelligence
-• Risk Management
-• Demo Trading Environment
-• Notification Center
-• Bitget Exchange Integration
-• Market Summary Agent
+## Quick Start
 
-Technology Stack
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/MrDilZ2214/TrendOracle-Labs.git
+   cd TrendOracle-Labs
+   ```
 
-- Frontend: Modern Web Technologies
-- Backend: API-Driven Architecture
-- AI Layer: Large Language Models (LLMs)
-- Deployment: Replit
+2. **Install Dependencies**
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-Documentation
+3. **Configure API Keys**
+   - Copy `config.example.py` to `config.py`
+   - Add your `NVIDIA_API_KEY`
+   - Add Bitget API keys (optional for full features)
 
-• TEAM.md
-• docs/AI_INTEGRATION.md
-• docs/architecture.md
-• docs/features.md
-• docs/roadmap.md
+4. **Run the Application**
+   ```bash
+   python main.py
+   ```
 
-Development Status
+5. **Access the Platform**
+   Open your browser and go to `http://localhost:5000`
 
-Current Stage:Functional MVP Completed
+## Project Structure
+```
+├── main.py                 # Main FastAPI application
+├── config.py               # Configuration and API keys
+├── requirements.txt        # Python dependencies
+├── agents/                 # AI agent modules
+├── core/                   # Core business logic
+├── tools/                  # Utility and integration tools
+├── docs/                   # Full documentation
+├── public/                 # Static web assets
+├── templates/              # HTML templates
+└── charts/                 # Generated chart images
+```
 
-Completed:
+## Documentation
+- [TEAM.md](./TEAM.md)
+- [AI Integration](./docs/AI_INTEGRATION.md)
+- [Architecture](./docs/architecture.md)
+- [Features](./docs/features.md)
+- [Roadmap](./docs/roadmap.md)
 
-• Repository Setup
-• Team Documentation
-• Architecture Design
-• AI Chat Assistant
-• Market Intelligence Dashboard
-• Demo Trading Environment
-• Notification Center
-• Bitget Integration
-• Risk Management Module
-• Trade Proposal Engine
-• Whale Monitoring System
-• News Intelligence Module
+## Development Status
+**Current Stage: Functional MVP Completed**
 
-In Progress:
+### Completed
+- Repository setup and project structure
+- Team documentation
+- System architecture design
+- AI Chat Assistant with tool calling
+- Market Intelligence Dashboard
+- Bitget Exchange Integration
+- Trade Proposal Engine
+- Whale Monitoring System
+- News Intelligence Module
+- Risk Management Module
+- Demo Trading Environment
+- Notification Center
+- Basic chart generation
 
-• Binance Integration
-• OKX Integration
-• Advanced AI Optimization
-• Multi-Exchange Intelligence
-- Frontend Enhancements
+### In Progress
+- Binance Integration
+- OKX Integration
+- Advanced AI optimization
+- Multi-exchange intelligence
+- Frontend enhancements and UI/UX improvements
+- Additional technical indicators
 
-Future Vision
+### Future Vision
+Build a comprehensive AI-powered crypto intelligence ecosystem that delivers real-time market insights, high-quality trading opportunities, advanced risk analysis, and intelligent decision support tools for traders worldwide.
 
-Our goal is to build a comprehensive AI-powered crypto intelligence ecosystem that delivers real-time market insights, trading opportunities, risk analysis, and decision support tools for traders worldwide.
+---
 
-Hackathon
-
-Built for the Bitget AI x Crypto Trading Hackathon 2026.
+**Built with ❤️ for Bitget AI x Crypto Trading Hackathon 2026**
+```
