@@ -1370,4 +1370,4 @@ if __name__ == "__main__":
     print("=" * 55)
     print("  🚀 CRYPTO AI WEB SERVER — Real-Time Dashboard Edition")
     print("=" * 55)
-    uvicorn.run(app, host="0.0.0.0", port=5000)
+    uvicorn.run(app, host="0.0.0.0", port=443)
