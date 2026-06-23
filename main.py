@@ -11,6 +11,17 @@ Features:
 
 import sys
 import os
+import warnings
+
+# loop.run_in_executor() internally calls the now-deprecated
+# asyncio.iscoroutinefunction() to check the callable — this is inside
+# asyncio itself, not our code, and is harmless. Silence it so logs stay
+# clean until Python's asyncio fixes it upstream.
+warnings.filterwarnings(
+    "ignore",
+    message=".*asyncio.iscoroutinefunction.*",
+    category=DeprecationWarning,
+)
 
 ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
 for _p in [ROOT_DIR,
