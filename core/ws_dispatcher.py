@@ -28,7 +28,7 @@ import bitget_client
 import trade_manager
 import demo_trading
 import database
-from price_cache import _price_cache, _price_cache_lock, _market_cache, get_cached_price, add_tracked_symbol
+from price_cache import _price_cache, _price_cache_lock, _market_cache, get_cached_price, get_fresh_price, add_tracked_symbol
 
 
 # ── User settings helpers (now SQLite-backed) ─────────────────────────────────
@@ -417,7 +417,14 @@ async def dispatch(session: WsSession, raw: str, get_history_fn, lock_fn, run_ch
         reason    = data.get("reason", "")
 
         add_tracked_symbol(symbol)
-        price_data = get_cached_price(symbol)
+        # NOTE: get_cached_price() can return a value up to 5s stale because
+        # it's served from the background refresh loop. When several trades
+        # are opened back-to-back (e.g. multiple AI/manual setups within the
+        # same 5s window) they would all read the exact same cached tick and
+        # therefore show an identical ENTRY price for every position. Fetch
+        # the live ticker directly here so every trade gets its own real,
+        # independent entry price.
+        price_data = get_fresh_price(symbol)
         if not price_data or not price_data.get("price"):
             await session.respond(req_id, False, error=f"Could not fetch live price for {symbol}")
             return
