@@ -86,7 +86,7 @@ TrendOracle Labs leverages advanced artificial intelligence to aggregate, analyz
 
 ## Documentation
 - [TEAM.md](./TEAM.md)
-- [SCREENSHOTS.md](./docs/SCREENSHOTS.md)
+- [SCREENSHOTS.md](./SCREENSHOTS.md)
 - [AI Integration](./docs/AI_INTEGRATION.md)
 - [Architecture](./docs/architecture.md)
 - [Features](./docs/features.md)
