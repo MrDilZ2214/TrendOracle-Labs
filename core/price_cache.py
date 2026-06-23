@@ -118,6 +118,34 @@ def _refresh_market_cache():
         time.sleep(30)
 
 
+def get_fresh_price(symbol: str) -> dict:
+    """
+    Always hits Bitget directly for the *current* price instead of
+    returning a value that may be up to 5s stale from the background
+    cache. Used for actions where the exact real entry price matters
+    (e.g. opening a demo/real trade) so each trade gets its own true
+    entry price instead of multiple trades reusing one cached tick.
+    """
+    sym = symbol.upper()
+    if not sym.endswith("USDT"):
+        sym += "USDT"
+    tickers = _bitget_fetch_tickers([sym])
+    if tickers:
+        t = tickers[0]
+        result = {
+            "price":     float(t.get("lastPr", 0)),
+            "change24h": round(float(t.get("change24h", 0)) * 100, 2),
+            "volume":    float(t.get("usdtVolume", 0)),
+            "ts":        datetime.now().isoformat(),
+        }
+        with _price_cache_lock:
+            _price_cache[sym] = result
+        return result
+    # Fall back to whatever is cached if the live fetch fails
+    with _price_cache_lock:
+        return _price_cache.get(sym, {})
+
+
 def get_cached_price(symbol: str) -> dict:
     sym = symbol.upper()
     if not sym.endswith("USDT"):
